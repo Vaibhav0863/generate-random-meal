@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body class="text-gray-800">
+		<main
+			class="w-screen h-full py-20 flex flex-col justify-center items-center"
+		>
+			<!-- Basic information. -->
+			<div class="text-center w-9/12 mx-auto text-5xl font-extrabold">
+				<span
+					class="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500"
+				>
+					Feeling Hungry?
+				</span>
+				<div>
+					<h1 class="text-2xl">Get a random meal by clicking below</h1>
+					<button
+						id="getMeal"
+						class="text-base bg-gradient-to-r from-blue-400 to-teal-500 text-white px-5 py-2 font-medium rounded-md focus:outline-none focus:shadow-outline"
+					>
+						GET MEAL 🍔
+					</button>
+				</div>
+			</div>
+
+			<!-- Output Result -->
+			<div id="result" class="hidden">
+				<div class="mt-20 w-9/12 mx-auto grid grid-cols-2 row-gap-6">
+					<div id="top" class="flex col-span-2">
+						<!-- left part -->
+						<div class="p-12 w-5/12">
+							<img
+								id="mealImg"
+								class="w-full h-full rounded-lg"
+								src="https://www.themealdb.com/images/media/meals/ywwrsp1511720277.jpg"
+								alt=""
+							/>
+						</div>
+
+						<!-- right part -->
+						<div class="py-12 w-6/12">
+							<div class="">
+								<h1 id="title" class="text-4xl mb-2 font-extrabold">
+									Roasted Eggplant With Tahini, Pine Nuts, and Lentils
+								</h1>
+								<div id="tags">
+									<!-- <span
+										class="uppercase text-xs mr-3 text-white bg-indigo-500 font-bold py-2 px-3 rounded-full"
+									>
+										Cake
+									</span>
+	
+									<span
+										class="uppercase text-xs mr-3 text-white bg-indigo-500 font-bold py-2 px-3 rounded-full"
+									>
+										Sweet
+									</span> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- content output -->
+					<div class="p-10 bg-gray-100 col-span-2 rounded-lg shadow-outline">
+						<dl>
+							<dt class="text-3xl font-bold">Instructions</dt>
+							<dd id="instruction" class="text-justify leading-relaxed mt-2">
+								<!-- <div class="mb-5">
+									<span class="font-medium mr-4 text-lg">STEP 1:</span>
+									Heat oven to 180C/160C fan/gas 4 and line the base and sides of
+									a 20cm square tin with baking parchment (the easiest way is to
+									cross 2 x 20cm-long strips over the base). To make the almond
+									sponge, put the butter, sugar, flour, ground almonds, baking
+									powder, eggs, vanilla and almond extract in a large bowl. Beat
+									with an electric whisk until the mix comes together smoothly.
+									Scrape into the tin, spreading to the corners, and bake for
+									25-30 mins – when you poke in a skewer, it should come out
+									clean. Cool in the tin for 10 mins, then transfer to a wire rack
+									to finish cooling while you make the second sponge.
+								</div>
+								<div class="mb-5">
+									<span class="font-medium mr-4 text-lg">STEP 2:</span>
+									For the pink sponge, line the tin as above. Mix all the
+									ingredients together as above, but don’t add the almond extract.
+									Fold in some pink food colouring. Then scrape it all into the
+									tin and bake as before. Cool.
+								</div>
+	
+								<div class="mb-5">
+									<span class="font-medium mr-4 text-lg">STEP 3:</span>
+									To assemble, heat the jam in a small pan until runny, then
+									sieve. Barely trim two opposite edges from the almond sponge,
+									then well trim a third edge. Roughly measure the height of the
+									sponge, then cutting from the well-trimmed edge, use a ruler to
+									help you cut 4 slices each the same width as the sponge height.
+									Discard or nibble leftover sponge. Repeat with pink cake.
+								</div>
+	
+								<div class="mb-5">
+									<span class="font-medium mr-4 text-lg">STEP 4:</span>
+									Take 2 x almond slices and 2 x pink slices and trim so they are
+									all the same length. Roll out one marzipan block on a surface
+									lightly dusted with icing sugar to just over 20cm wide, then
+									keep rolling lengthways until the marzipan is roughly 0.5cm
+									thick. Brush with apricot jam, then lay a pink and an almond
+									slice side by side at one end of the marzipan, brushing jam in
+									between to stick sponges, and leaving 4cm clear marzipan at the
+									end. Brush more jam on top of the sponges, then sandwich
+									remaining 2 slices on top, alternating colours to give a
+									checkerboard effect. Trim the marzipan to the length of the
+									cakes.
+								</div>
+	
+								<div class="mb-5">
+									<span class="font-medium mr-4 text-lg">STEP 5:</span>
+									Carefully lift up the marzipan and smooth over the cake with
+									your hands, but leave a small marzipan fold along the bottom
+									edge before you stick it to the first side. Trim opposite side
+									to match size of fold, then crimp edges using fingers and thumb
+									(or, more simply, press with prongs of fork). If you like, mark
+									the 10 slices using the prongs of a fork.
+								</div>
+	
+								<div class="mb-5">
+									<span class="font-medium mr-4 text-lg">STEP 6:</span>
+									Assemble second Battenberg and keep in an airtight box or well
+									wrapped in cling film for up to 3 days. Can be frozen for up to
+									a month.
+								</div> -->
+							</dd>
+						</dl>
+						<dl class="mt-12">
+							<dt class="text-3xl font-bold">Ingredient</dt>
+							<div id="ingredient">
+								<!-- <dd class="flex my-3">
+									<p class="text-lg font-medium flex items-center">
+										1. Butter
+										<span
+											class="text-xs text-white font-medium mx-5 bg-blue-500 px-3 py-1 rounded-full"
+											>Dusting</span
+										>
+									</p>
+								</dd> -->
+							</div>
+						</dl>
+						<div class="mt-16">
+							<iframe
+								id="videoTut"
+								class="w-8/12 mx-auto rounded-lg"
+								height="400px"
+								src="https://www.youtube.com/embed/aB41Q7kDZQ0"
+								frameborder="0"
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	<script src="js/bundle.js"></script></body>
+</html>

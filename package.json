@@ -1,0 +1,27 @@
+{
+  "name": "forkey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "axios": "^0.19.2",
+    "jquery": "^3.5.1",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.7.2"
+  },
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "html-webpack-plugin": "^4.3.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
